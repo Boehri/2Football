@@ -1,0 +1,39 @@
+<!--
+    <table mat-table *ngFor="let match of currentMatches">
+    <td>{{ match.MatchDateTime | date:'EE, dd.MM, HH:mm'}}</td>
+    <td><img src="{{match.Team1.TeamIconUrl}}"></td>
+    <td></td>
+    <td>{{match.Team1.TeamName}} : {{match.Team2.TeamName}}</td>
+    <td><img src="{{match.Team2.TeamIconUrl}}"></td> 
+</table>
+-->
+ <div class="table-scroll">
+        <!--zeigt alle Matches für die jeweilige Liga am passenden Spieltag, oder die letzten Spiele des Lieblingsvereins an-->
+        <table>
+          <tr class="gamedaytable">
+            <td>Datum</td>
+            <td>Team 1 &nbsp;&nbsp;</td>
+            <td class="showImages"></td>
+            <td>Ergebnis &nbsp;&nbsp;</td>
+            <td class="showImages"></td>
+            <td>Team 2</td>
+          </tr>
+          <tr *ngFor="let match of currentMatches" class="table table-striped">
+            <td>{{ match.MatchDateTime | date:'EE, dd.MM, HH:mm'}}</td>
+            <td class="team1">{{ match.Team1.TeamName }}</td>
+            <td><img src="{{ match.Team1.TeamIconUrl }}" /></td>
+            <td *ngIf="match.MatchIsFinished && match.MatchResults[0].ResultOrderID == 1">
+              {{ match.MatchResults[0].PointsTeam1 }} -
+              {{ match.MatchResults[0].PointsTeam2 }}
+            </td>
+            <td *ngIf="match.MatchIsFinished == false">&nbsp; - : -</td>
+            <td><img src="{{ match.Team2.TeamIconUrl }}" /></td>
+            <td class="team2">{{ match.Team2.TeamName }}</td>
+          </tr>
+        </table>
+      </div>
+
+
+
+
+

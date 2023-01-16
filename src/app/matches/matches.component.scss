@@ -1,0 +1,40 @@
+table {
+  color: black;
+  text-align: center;
+}
+img {
+  height: 25px;
+  width: 25px;
+}
+select {
+  height: 35px;
+  width: 100px;
+}
+.gamedaytable {
+  text-align: center;
+}
+.table-scroll {
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 0px;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .showImages {
+    display: none;
+  }
+}
+td {
+  padding: 5px;
+}
+.team1 {
+  text-align: right;
+}
+.team2 {
+  text-align: left;
+}
+.gamedaytable {
+  background-color: lightblue;
+  border-radius: 8px;
+}
