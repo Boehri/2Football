@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class FootballResultsService {
   constructor(private http: HttpClient) {}
 
-  getResults() {
-    return this.http.get("https://www.openligadb.de/api/getmatchdata/bl1");
+  getResults(league: string) {
+    return this.http.get(`https://www.openligadb.de/api/getmatchdata/${league}`);
   }
 }
 
