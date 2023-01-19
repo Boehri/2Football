@@ -60,7 +60,7 @@ import {MatTableModule} from "@angular/material/table";
     HttpClientModule,
     MatTableModule
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
