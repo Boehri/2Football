@@ -15,6 +15,7 @@ export class MatchesComponent implements OnInit {
   constructor(private resultService: FootballResultsService, private datePipe: DatePipe, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.league = 'bl1'
     this.route.params.subscribe((params) => {
       this.league = params["league"];
       this.getMatchesofMatchDay(this.league);
@@ -22,7 +23,7 @@ export class MatchesComponent implements OnInit {
   }
 
   getMatchesofMatchDay(league: string) {
-    this.resultService.getResults(this.league).subscribe((data) => {
+    this.resultService.getResults(league).subscribe((data) => {
       this.currentMatches = data;
     });
   }

@@ -4,7 +4,7 @@ import { InfoTabsComponent } from './info-tabs/info-tabs.component';
 
 const routes: Routes = [
   {path: 'results/:league', component: InfoTabsComponent},
-  { path: '', redirectTo: 'results', pathMatch: 'full' }
+  { path: '', redirectTo: '/results/bl1', pathMatch: 'full' }
 ];
 
 @NgModule({
