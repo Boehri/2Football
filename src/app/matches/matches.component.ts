@@ -23,7 +23,7 @@ export class MatchesComponent implements OnInit {
   }
 
   getMatchesofMatchDay(league: string) {
-    this.resultService.getResults(this.league).subscribe((data) => {
+    this.resultService.getResults(league).subscribe((data) => {
       this.currentMatches = data;
     });
   }

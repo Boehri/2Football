@@ -24,6 +24,7 @@ import {MatTabsModule} from "@angular/material/tabs";
 import { MatchesComponent } from './matches/matches.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from "@angular/material/table";
+import { TableComponent } from './table/table.component';
 
 
 
@@ -35,6 +36,7 @@ import {MatTableModule} from "@angular/material/table";
     SidenavComponent,
     InfoTabsComponent,
     MatchesComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,

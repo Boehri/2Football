@@ -1,0 +1,16 @@
+img {
+  height: 25px;
+  width: 25px;
+}
+.table-scroll {
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 0px;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .showImages {
+    display: none;
+  }
+}

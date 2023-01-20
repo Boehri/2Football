@@ -1,0 +1,21 @@
+<div class="table-scroll">
+        <!--zeigt die aktuelle Tabelle für die ausgewählte Liga oder den Lieblingsverein dar-->
+        <h1>Die Tabelle des {{gameday.GroupOrderID}}. Spieltages</h1>
+       
+        <table>
+          <tr>
+            <td>Pos</td>
+            <td></td>
+            <td>Name</td>
+            <td>Games</td>
+            <td>Points</td>
+          </tr>
+          <tr *ngFor="let team of table; index as i" class="table table-striped">
+            <td style="text-align: center">{{ i + 1 }}</td>
+            <td><img src="{{ team.TeamIconUrl }}" /></td>
+            <td>{{ team.TeamName }}</td>
+            <td>{{ team.Matches }}</td>
+            <td>{{ team.Points }}</td>
+          </tr>
+        </table>
+      </div>
