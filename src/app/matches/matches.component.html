@@ -6,9 +6,8 @@
     <td>{{match.Team1.TeamName}} : {{match.Team2.TeamName}}</td>
     <td><img src="{{match.Team2.TeamIconUrl}}"></td> 
 </table>
--->
+
 <div class="table-scroll">
-  <!--zeigt alle Matches für die jeweilige Liga am passenden Spieltag, oder die letzten Spiele des Lieblingsvereins an-->
   <table>
     <tr class="gamedaytable">
       <td>Datum</td>
@@ -31,4 +30,14 @@
       <td class="team2">{{ match.Team2.TeamName }}</td>
     </tr>
   </table>
+</div>
+-->
+<div class="grid-container">
+<div *ngFor="let match of currentMatches">
+  <div class="grid-item">
+    <p class="teams"><img src="{{ match.Team1.TeamIconUrl }}"> &nbsp;{{ match.Team1.TeamName }}</p> 
+    <p class="teams"><img src="{{ match.Team2.TeamIconUrl }}"/>&nbsp;{{ match.Team2.TeamName }}</p>
+    
+  </div>
+</div>
 </div>

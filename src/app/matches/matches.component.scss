@@ -1,4 +1,4 @@
-
+/*
 table {
   color: black;
   text-align: center;
@@ -29,9 +29,35 @@ select {
 td {
   padding: 5px;
 }
-.team1 {
-  text-align: right;
+*/
+img {
+  height: 25px;
+  width: 25px;
 }
-.team2 {
-  text-align: left;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.grid-item {
+    margin: 15px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+}
+.teams {
+  margin-left: 10px;
+  display: flex; 
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
